@@ -8,7 +8,7 @@ import {
     RefreshCw
   } from 'lucide-react';
 
-function Dashboard() {
+function Home() {
     const [isDarkMode] = useState(false);
     const [userName] = useState('Gustavo');
     const navigate = useNavigate();
@@ -110,5 +110,5 @@ function Dashboard() {
     );
   }
 
-export default Dashboard;
+export default Home;
   
