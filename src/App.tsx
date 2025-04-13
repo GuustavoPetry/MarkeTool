@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
 import Notas from './components/Notas.tsx';
 import Patrimonio from './components/Patrimonio.tsx';
-import Manual from './components/manual.tsx'
+import Manual from './components/Manual.tsx'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
