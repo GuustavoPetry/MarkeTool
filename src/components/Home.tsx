@@ -26,7 +26,13 @@ function Home() {
         desc: 'Visualizar ativos',
         onClick: () => navigate('/patrimonio')
       },
-      { icon: Users, title: 'Lançamentos Manuais', desc: 'Adicionar registros' },
+
+      { icon: Users, 
+        title: 'Lançamentos Manuais', 
+        desc: 'Adicionar registros',
+        onClick: () => navigate('/manual')
+      },
+
       { icon: HelpCircle, title: 'Dúvidas comuns', desc: 'Central de ajuda' },
     ];
   
