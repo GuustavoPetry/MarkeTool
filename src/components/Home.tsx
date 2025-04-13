@@ -33,7 +33,12 @@ function Home() {
         onClick: () => navigate('/manual')
       },
 
-      { icon: HelpCircle, title: 'Dúvidas comuns', desc: 'Central de ajuda' },
+      { icon: HelpCircle, 
+        title: 'Dúvidas comuns', 
+        desc: 'Central de ajuda',
+        onClick: () => navigate('/ajuda')
+      
+      },
     ];
   
     return (

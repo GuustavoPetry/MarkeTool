@@ -6,6 +6,7 @@ import Footer from './components/Footer.tsx';
 import Notas from './components/Notas.tsx';
 import Patrimonio from './components/Patrimonio.tsx';
 import Manual from './components/Manual.tsx'
+import Ajuda from './components/Ajuda.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/patrimonio" element={<Patrimonio />} />
             <Route path="/notas" element={<Notas />} />
             <Route path="/manual" element={<Manual />} />
+            <Route path="/ajuda" element={<Ajuda />} />
           </Routes>
         </div>
 
