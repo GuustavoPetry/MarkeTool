@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home.tsx';
 import Navbar from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
+import Notas from './components/Notas.tsx';
 import Patrimonio from './components/Patrimonio.tsx';
+import Manual from './components/Manual.tsx';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -18,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/patrimonio" element={<Patrimonio />} />
+            <Route path="/notas" element={<Notas />} />
           </Routes>
         </div>
 

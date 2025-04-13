@@ -14,12 +14,17 @@ function Home() {
     const navigate = useNavigate();
   
     const cards = [
-      { icon: FileText, title: 'Enviar notas', desc: 'Gerenciar documentos' },
+      { icon: FileText, 
+        title: 'Enviar notas', 
+        desc: 'Gerenciar documentos',
+        onClick: () => navigate('/notas')
+      },
+
       {
         icon: PieChart,
         title: 'Meu patrimônio',
         desc: 'Visualizar ativos',
-        onClick: () => navigate('/patrimonio'),
+        onClick: () => navigate('/patrimonio')
       },
       { icon: Users, title: 'Lançamentos Manuais', desc: 'Adicionar registros' },
       { icon: HelpCircle, title: 'Dúvidas comuns', desc: 'Central de ajuda' },
