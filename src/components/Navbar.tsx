@@ -1,5 +1,6 @@
 // src/components/Navbar.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PieChart, Search, Sun, Moon, User, ChevronDown, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext'; // importação do contexto
@@ -23,12 +24,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, userName }) 
     <nav className={`fixed w-full ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg z-50`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+          <Link to="/home" className="flex items-center">
             <PieChart className={`h-8 w-8 ${isDarkMode ? 'text-emerald-400' : 'text-emerald-500'}`} />
             <span className={`ml-2 text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              Marketool
+                Marketool
             </span>
-          </div>
+          </Link>
+          
 
           <div className="flex items-center space-x-6">
             {/* Campo de busca */}
