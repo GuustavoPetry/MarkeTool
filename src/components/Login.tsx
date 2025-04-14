@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, HelpCircle, Infinity, DollarSign } from 'lucide-react';
+import { ArrowLeft, HelpCircle, DollarSign } from 'lucide-react';
 
 interface LoginProps {
   onLogin?: (cpf: string, senha: string) => boolean; // agora retorna booleano
