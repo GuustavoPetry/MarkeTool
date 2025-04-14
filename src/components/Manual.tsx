@@ -7,7 +7,7 @@ interface ManualProps {
 
 const Manual: React.FC<ManualProps> = ({ onAddAsset }) => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 pt-36">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Lançamentos Manuais</h1>
         <p className="text-gray-600">

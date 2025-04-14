@@ -10,7 +10,7 @@ import {
 
 function Home() {
     const [isDarkMode] = useState(false);
-    const [userName] = useState('Gustavo');
+    const [userName] = useState('Visitante');
     const navigate = useNavigate();
   
     const cards = [
@@ -45,7 +45,7 @@ function Home() {
 
 
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 pt-24">
 
         {/* Welcome Message */}
         <div className={`mb-8 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>

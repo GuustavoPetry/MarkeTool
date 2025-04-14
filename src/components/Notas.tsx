@@ -35,7 +35,7 @@ const Notas: React.FC<NotasProps> = ({ onFileUpload }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 pt-36">
       <div className="mb-6">
         <label className="block text-gray-600 mb-2">Arquivo/Corretora:</label>
         <input
