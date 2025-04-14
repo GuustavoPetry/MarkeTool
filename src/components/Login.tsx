@@ -57,7 +57,7 @@ const Login: React.FC<LoginProps> = ({ onLogin, onForgotAccount, onCreateAccount
             <div className="mb-4">
               <input
                 type="text"
-                placeholder="Número da conta ou CPF"
+                placeholder="Username"
                 value={cpf}
                 onChange={(e) => setCpf(e.target.value)}
                 className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D0D]"
@@ -67,7 +67,7 @@ const Login: React.FC<LoginProps> = ({ onLogin, onForgotAccount, onCreateAccount
             <div className="mb-6">
               <input
                 type="password"
-                placeholder="Senha"
+                placeholder="Password"
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
                 className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4D0D]"

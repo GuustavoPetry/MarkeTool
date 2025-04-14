@@ -14,7 +14,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const validCredentials = {
-    cpf: '12345678911',
+    cpf: 'visitante',
     senha: '123',
   };
 
@@ -23,7 +23,7 @@ function App() {
       setIsAuthenticated(true);
       return true; // ✅ agora retorna boolean!
     } else {
-      alert('CPF ou senha inválidos.');
+      alert('Login ou Senha inválidos!!!');
       return false;
     }
   };
