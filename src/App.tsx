@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PrivateRoute from './routes/PrivateRoute.tsx';
 import Login from './components/Login.tsx';
 import Home from './components/Home.tsx';
-// import Navbar from './components/Navbar.tsx';
-// import Footer from './components/Footer.tsx';
 import Notas from './components/Notas.tsx';
 import Patrimonio from './components/Patrimonio.tsx';
 import Manual from './components/Manual.tsx';
