@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, HelpCircle, DollarSign } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext.tsx'; // 👈 novo import
 
 interface LoginProps {
-  onLogin?: (cpf: string, senha: string) => boolean; // agora retorna booleano
   onForgotAccount?: () => void;
   onCreateAccount?: () => void;
 }
 
-const Login: React.FC<LoginProps> = ({ onLogin, onForgotAccount, onCreateAccount }) => {
+const Login: React.FC<LoginProps> = ({ onForgotAccount, onCreateAccount }) => {
   const [cpf, setCpf] = useState('');
   const [senha, setSenha] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+  const { login } = useAuth(); // 👈 novo
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const success = onLogin?.(cpf, senha);
+    const success = login(cpf, senha);
     if (success) {
       navigate('/home');
     } else {
-        console.log(cpf, senha);
       alert('CPF ou senha incorretos!');
     }
   };
