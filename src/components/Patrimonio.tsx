@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
+import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
 interface PatrimonioData {
   ativo: string;
@@ -18,7 +19,16 @@ const patrimonioData: PatrimonioData[] = [
   { ativo: 'HGLG11', valorAtual: '-', percentual: '8.14%' },
   { ativo: 'XPML11', valorAtual: '-', percentual: '5.10%' },
   { ativo: 'CXRI04', valorAtual: '-', percentual: '3.16%' },
-  // Add remaining assets as needed
+];
+
+const chartData = patrimonioData.map((item) => ({
+  name: item.ativo,
+  value: parseFloat(item.percentual.replace('%', '')),
+}));
+
+const COLORS = [
+  '#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#845EC2',
+  '#D65DB1', '#FF6F91', '#FFC75F', '#F9F871', '#2C73D2',
 ];
 
 function Patrimonio() {
@@ -51,12 +61,27 @@ function Patrimonio() {
       </div>
 
       <div className="grid grid-cols-2 gap-8">
-        {/* Donut Chart - You'll need to implement this with a charting library */}
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="aspect-square bg-gray-100 rounded-full flex items-center justify-center">
-            {/* Placeholder for donut chart */}
-            <p className="text-gray-500">Gráfico Donut</p>
-          </div>
+        {/* Donut Chart */}
+        <div className="bg-white rounded-lg shadow p-6 flex justify-center">
+          <PieChart width={400} height={400}>
+            <Pie
+              data={chartData}
+              cx="50%"
+              cy="50%"
+              innerRadius={80}
+              outerRadius={120}
+              fill="#8884d8"
+              paddingAngle={2}
+              dataKey="value"
+              nameKey="name"
+            >
+              {chartData.map((_, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+            </Pie>
+            <Tooltip />
+            <Legend layout="vertical" verticalAlign="middle" align="right" />
+          </PieChart>
         </div>
 
         {/* Table */}

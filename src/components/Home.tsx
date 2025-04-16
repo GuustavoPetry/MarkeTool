@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Table from './table';
 import {
     PieChart,
     FileText,
@@ -7,6 +8,59 @@ import {
     HelpCircle,
     RefreshCw
   } from 'lucide-react';
+
+const mockData = [
+  {
+    ativo: 'ABCB4',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '17,61%',
+    valorTotal: 'R$ 289,97'
+  },
+  {
+    ativo: 'B5P211',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '0,54%',
+    valorTotal: 'R$ 0,51'
+  },
+  {
+    ativo: 'BBAS3',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '3,79%',
+    valorTotal: 'R$ 36,47'
+  },
+  {
+    ativo: 'BBDC4',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '11,44%',
+    valorTotal: 'R$ 68,01'
+  },
+  {
+    ativo: 'CMIG4',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '0,82%',
+    valorTotal: 'R$ 12,72'
+  },
+
+  {
+    ativo: 'EGIE3',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '9,02%',
+    valorTotal: 'R$ 72,06'
+  },
+  {
+    ativo: 'FLRY3',
+    percentDiario: '0,00%',
+    valorDiario: 'R$ 0,00',
+    percentTotal: '1,84%',
+    valorTotal: 'R$ 19,50'
+  },
+];
 
 function Home() {
     const [isDarkMode] = useState(false);
@@ -37,7 +91,6 @@ function Home() {
         title: 'Dúvidas comuns', 
         desc: 'Central de ajuda',
         onClick: () => navigate('/ajuda')
-      
       },
     ];
   
@@ -92,33 +145,7 @@ function Home() {
             </div>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className={`${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                <tr>
-                  <th className={`px-6 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-500'} uppercase tracking-wider`}>Ativo</th>
-                  <th className={`px-6 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-500'} uppercase tracking-wider`}>% Diário</th>
-                  <th className={`px-6 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-500'} uppercase tracking-wider`}>R$ Diário</th>
-                  <th className={`px-6 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-500'} uppercase tracking-wider`}>% Total</th>
-                  <th className={`px-6 py-3 text-left text-xs font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-500'} uppercase tracking-wider`}>R$ Total</th>
-                </tr>
-              </thead>
-              <tbody className={`${isDarkMode ? 'text-gray-300' : 'text-gray-900'}`}>
-                <tr>
-                  <td colSpan={5} className="px-6 py-4 text-center text-gray-500">
-                    Nenhum resultado encontrado
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot className={`${isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
-                <tr>
-                  <td className={`px-6 py-4 font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Total:</td>
-                  <td className={`px-6 py-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>0%</td>
-                  <td className={`px-6 py-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>R$ 0,00</td>
-                  <td className={`px-6 py-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>0%</td>
-                  <td className={`px-6 py-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>R$ 0,00</td>
-                </tr>
-              </tfoot>
-            </table>
+            <Table data={mockData} />
           </div>
         </div>
       </div>
