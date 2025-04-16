@@ -29,7 +29,7 @@ const Ajuda: React.FC = () => {
     {
       icon: <PlayCircle className="w-16 h-16 text-cyan-500" />,
       title: 'Como Funciona',
-      description: 'Entenda como funciona a myProfit e comece agora!'
+      description: 'Entenda como funciona a MarkeTool e comece agora!'
     },
     {
       icon: <Phone className="w-16 h-16 text-green-600" />,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, HelpCircle, DollarSign } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext.tsx'; // 👈 novo import
+import { useAuth } from '../contexts/AuthContext.tsx';
 
 interface LoginProps {
   onForgotAccount?: () => void;
@@ -13,7 +13,7 @@ const Login: React.FC<LoginProps> = ({ onForgotAccount, onCreateAccount }) => {
   const [senha, setSenha] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const { login } = useAuth(); // 👈 novo
+  const { login } = useAuth();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +51,7 @@ const Login: React.FC<LoginProps> = ({ onForgotAccount, onCreateAccount }) => {
             <DollarSign className="w-12 h-12 text-[#FF4D0D]" />
           </div>
 
-          <h1 className="text-2xl font-bold text-center mb-8">Boas Vindas!</h1>
+          <h1 className="text-2xl font-bold text-center mb-8">Bem-vindo ao <br /> MarkeTool!</h1>
 
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
